@@ -35,7 +35,6 @@ ai-voice-chat/
 ## 📋 Prerequisites
 
 - Python 3.8+
-- Node.js 14+
 - OpenAI API key
 - SMTP server access
 

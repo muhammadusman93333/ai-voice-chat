@@ -1,0 +1,232 @@
+/* Reset and base styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+#callBox {
+    display: none;
+    padding: 20px;
+    border: 2px solid #000;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+#callButton {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background: #fff;
+    color: #6e8efb;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: block;
+    margin: 20px auto;
+}
+#callButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+#callBox {
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    min-width: 280px;
+}
+@media (max-width: 480px) {
+    #callButton {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+    #callBox {
+        padding: 20px;
+        font-size: 1rem;
+        min-width: 250px;
+    }
+}
+/* Ring box container */
+#ringBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    display: none;
+    z-index: 9999;
+}
+
+/* Content wrapper for centering */
+.ring-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Timer styling */
+.timer {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin: 20px 0;
+    display: none;
+}
+
+/* Call status */
+.call-status {
+    font-size: 1.5rem;
+    color: white;
+    margin: 20px 0;
+    font-size: 16px;
+    white-space: pre-line;
+    text-align: center;
+}
+
+/* End call button */
+#endCallBtn {
+    display: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10000;
+    pointer-events: auto;
+    display: none;
+    margin: 20px auto;
+}
+
+#endCallBtn:hover {
+    background: #ff2222;
+    transform: translateY(-2px);
+}
+
+/* Wave animations */
+.wave {
+    position: absolute;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.ringing {
+    animation: pulse 1s infinite;
+}
+
+/* Stars Animation */
+.stars {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    box-shadow: 0 0 3px white;
+    border-radius: 50%;
+    animation: starAnim 1.5s infinite;
+}
+
+@keyframes starAnim {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* Waves Animation */
+.wave {
+    position: absolute;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    animation: waveAnim 2s infinite;
+}
+
+@keyframes waveAnim {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.8;
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
+}
+
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    animation: slideIn 0.5s ease-out;
+}
+
+.notification.success {
+    background: #4CAF50;
+    color: white;
+}
+
+.notification.error {
+    background: #f44336;
+    color: white;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}

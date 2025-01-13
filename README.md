@@ -45,15 +45,6 @@ ai-voice-chat/
 # Clone repository
 git clone https://github.com/muhammadusman93333/openai_realtime_api.git
 cd openai_realtime_api
-
-# Setup virtual environment (Windows)
-python -m venv venv
-venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-# Run application
-python src/app.py
 ```
 # Configure environment
 copy .env.example .env
@@ -67,6 +58,17 @@ SMTP_PASSWORD=your-password
 RECEIVING_EMAIL=recipient-email
 OPENAI_API_KEY=your-openai-key
 ```
+# Setup virtual environment (Windows)
+```
+python -m venv venv
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+# Run application
+python src/app.py
+```
+
 
 
 The application will be available at `http://127.0.0.1:5000/`.

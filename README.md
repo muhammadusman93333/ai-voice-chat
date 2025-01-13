@@ -24,9 +24,10 @@ ai-voice-chat/
 │   ├── static/
 │   │   ├── css/
 │   │   └── js/
+|   |   └── assets/
 │   ├── templates/
 │   ├── app.py
-│   └── .env
+│   └── .env.example
 ├── requirements.txt
 └── README.md
 ```
@@ -43,7 +44,7 @@ ai-voice-chat/
 ```bash
 # Clone repository
 git clone https://github.com/muhammadusman93333/openai_realtime_api.git
-cd ai-voice-chat
+cd openai_realtime_api
 
 # Setup virtual environment (Windows)
 python -m venv venv

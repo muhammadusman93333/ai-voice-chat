@@ -83,7 +83,7 @@ Push to branch
 Open pull request
 📞 Support
 Issues: GitHub Issues
-Email: your.email@domain.com
+Email: info@uvisionpk.com
 Documentation: Wiki
 🌟 Keywords
 ai voice chat, openai gpt-4, flask application, webrtc, real-time communication, python web app, voice assistant
